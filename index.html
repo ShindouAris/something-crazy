@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Nhận Discord Nitro miễn phí</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background-color: #36393f;
+      color: white;
+      font-family: Arial, sans-serif;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      background-color: #2f3136;
+      padding: 30px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+
+    .button {
+      background-color: #5865f2;
+      color: white;
+      padding: 15px 30px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      background-color: #4752c4;
+    }
+
+    .fullscreen-gif {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .fullscreen-gif img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎉 Bạn vừa được tặng 1 tháng Discord Nitro!</h1>
+    <p>Nhấn vào nút bên dưới để nhận ngay.</p>
+    <button class="button" onclick="rickroll()">Nhận Nitro</button>
+  </div>
+
+  <div id="gifContainer" class="fullscreen-gif" style="display: none;">
+    <img src="https://tenor.com/view/hd-rickroll-rick-astley-4k-gif-23699798" alt="Rickrolled">
+  </div>
+
+  <script>
+    function rickroll() {
+      document.getElementById("gifContainer").style.display = "flex";
+      if (document.documentElement.requestFullscreen) {
+        document.documentElement.requestFullscreen();
+      }
+    }
+  </script>
+</body>
+</html>
